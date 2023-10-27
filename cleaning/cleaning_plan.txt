@@ -1,0 +1,47 @@
+### Goals
+
+The goal of this project is to identify relevant variables that could come into play
+for a data auto-completion application required by Santé Publique France.
+
+### Data overview
+
+The data is the Open Food Facts dataset. It's a quite large dataset with more than 160 variables;
+
+Only relevant variables to the goal of this project were kept.
+
+As I chose to focus on the Nutri-score related data, I reduced the dataset scope to 22 variables:
+
+- General qualitative product information:
+	Product name
+	Brand
+	Country of origin
+	Product category
+	Product main category
+
+- Nutritional quantitative information:
+	Nutritional values per 100g for variables with less than 80% missing values
+
+-  Nutri-score
+
+
+### Cleaning treatments
+
+The following data quality shortfalls have been identified during the inspection phase.
+
+1. 
+Shortfall : 73% missing values for categories_fr
+Treatment : Do nothing
+
+2. 
+Shortfall : 73% missing values in main_category_fr
+Treatment : Do nothing
+
+3. 
+Shortfall : 722 unique values in countries_fr
+Reasons : Some products have several countries in the same field
+Treatment : Keep the first country
+
+4.
+Shortfall : 37000 duplicates for product name & brand combination
+Treatment : 
+
